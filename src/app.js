@@ -3,7 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 
 
-
+const port = process.env.PORT || 3000
 const app = express()
 
 const publicDir = path.join(__dirname, '../public')
@@ -22,6 +22,6 @@ app.get('', (req, res)=>{
     })
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is Up')
 })
